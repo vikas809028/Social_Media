@@ -1,0 +1,17 @@
+.postcard{
+    width: 25rem;
+    margin: 20px 50px;
+
+}
+.hashTag{
+    margin: 2px;
+}
+
+.likeIcon{
+    width: 40px;
+    height: 1.5rem;
+}
+.likeContainer{
+    display: flex;
+    margin: 15px 0px 0px 0px;
+}

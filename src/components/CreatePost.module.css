@@ -1,0 +1,8 @@
+.CreatePostContainer{
+    box-sizing: border-box;
+    width: 80%;
+    margin: 4% 10% ;
+    border: 2px solid rgb(14, 14, 14);
+    border-radius: 10px;
+    padding: 2rem;
+}
