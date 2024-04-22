@@ -8,18 +8,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import { PostList as PostListData } from "../store/post-list-store";
 
 const PostList = () => {
-  const { postList, addInitailPosts } = useContext(PostListData);
-  const [fetching, setFetching] = useState(false);
-
-  useEffect(() => {
-    setFetching(true);
-    fetch("https://dummyjson.com/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        addInitailPosts(data.posts);
-        setFetching(false);
-      });
-  }, []);
+  const { postList, fetching } = useContext(PostListData);
 
   // const [dataFetched, setDataFetched] = useState(false);
 

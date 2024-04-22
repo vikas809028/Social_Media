@@ -25,7 +25,20 @@ const CreatePost = () => {
     reactionsElement.current.value = " ";
     hashTagElement.current.value = " ";
 
-    addPost(userId, postTitle, postBody, reactions, hashTag);
+    fetch("https://dummyjson.com/posts/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: Date.now(),
+        title: postTitle,
+        body: postBody,
+        reactions: reactions,
+        userId: userId,
+        tags: hashTag,
+      }),
+    })
+      .then((res) => res.json())
+      .then((post) => addPost(post));
   };
   return (
     <>
